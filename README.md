@@ -1,3 +1,4 @@
 # SY23-24
 Software and App Design <br>
-initial setup 1/4/2024
+<b>initial setup 1/4/2024</b>
+<b>updated from computer 1/5/2024</b>
