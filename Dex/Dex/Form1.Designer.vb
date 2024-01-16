@@ -27,11 +27,11 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.field1 = New System.Windows.Forms.TextBox()
+        Me.field2 = New System.Windows.Forms.TextBox()
+        Me.field3 = New System.Windows.Forms.TextBox()
+        Me.field4 = New System.Windows.Forms.TextBox()
+        Me.field5 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -87,40 +87,41 @@ Partial Class Form1
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Price"
         '
-        'TextBox1
+        'field1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(81, 238)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox1.TabIndex = 5
+        Me.field1.Location = New System.Drawing.Point(81, 238)
+        Me.field1.Multiline = True
+        Me.field1.Name = "field1"
+        Me.field1.Size = New System.Drawing.Size(125, 27)
+        Me.field1.TabIndex = 5
         '
-        'TextBox2
+        'field2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(81, 271)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox2.TabIndex = 6
+        Me.field2.Location = New System.Drawing.Point(81, 271)
+        Me.field2.Name = "field2"
+        Me.field2.Size = New System.Drawing.Size(125, 27)
+        Me.field2.TabIndex = 6
         '
-        'TextBox3
+        'field3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(81, 313)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox3.TabIndex = 7
+        Me.field3.Location = New System.Drawing.Point(81, 313)
+        Me.field3.Name = "field3"
+        Me.field3.Size = New System.Drawing.Size(125, 27)
+        Me.field3.TabIndex = 7
         '
-        'TextBox4
+        'field4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(81, 351)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox4.TabIndex = 8
+        Me.field4.Location = New System.Drawing.Point(81, 351)
+        Me.field4.Name = "field4"
+        Me.field4.Size = New System.Drawing.Size(125, 27)
+        Me.field4.TabIndex = 8
         '
-        'TextBox5
+        'field5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(81, 391)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(125, 27)
-        Me.TextBox5.TabIndex = 9
+        Me.field5.Location = New System.Drawing.Point(81, 391)
+        Me.field5.Name = "field5"
+        Me.field5.Size = New System.Drawing.Size(125, 27)
+        Me.field5.TabIndex = 9
         '
         'PictureBox1
         '
@@ -170,11 +171,11 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.field5)
+        Me.Controls.Add(Me.field4)
+        Me.Controls.Add(Me.field3)
+        Me.Controls.Add(Me.field2)
+        Me.Controls.Add(Me.field1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -197,11 +198,11 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents field1 As TextBox
+    Friend WithEvents field2 As TextBox
+    Friend WithEvents field3 As TextBox
+    Friend WithEvents field4 As TextBox
+    Friend WithEvents field5 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem

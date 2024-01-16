@@ -3,25 +3,25 @@
 Public Class Form1
     Dim records(50) As String
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        TextBox3.Text = ""
-        TextBox4.Text = ""
-        TextBox5.Text = ""
+        field1.Text = ""
+        field2.Text = ""
+        field3.Text = ""
+        field4.Text = ""
+        field5.Text = ""
         PictureBox1.Image = Nothing
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         Dim outfile As New IO.StreamWriter("data.txt")
-        outfile.Write(TextBox1.Text)
+        outfile.Write(field1.Text)
         outfile.Write("|")
-        outfile.Write(TextBox2.Text)
+        outfile.Write(field2.Text)
         outfile.Write("|")
-        outfile.Write(TextBox3.Text)
+        outfile.Write(field3.Text)
         outfile.Write("|")
-        outfile.Write(TextBox4.Text)
+        outfile.Write(field4.Text)
         outfile.Write("|")
-        outfile.Write(TextBox5.Text)
+        outfile.Write(field5.Text)
         outfile.Write("|")
         outfile.WriteLine(PictureBox1.ImageLocation)
         outfile.Close()
@@ -38,9 +38,25 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If IO.File.Exists("Data.txt") Then
             Dim inFile As New StreamReader("data.txt")
-            records(0) = inFile.ReadLine
-            records(1) = inFile.ReadLine
+            Dim idx As Integer = 0
+            While (Not inFile.EndOfStream)
+                records(idx) = inFile.ReadLine
+                idx = idx + 1
+            End While
             inFile.Close()
+            Showrecord(0)
+        End If
+    End Sub
+    Public Sub Showrecord(Index As Integer)
+        Dim fields() As String
+        fields = records(Index).Split("|")
+        field1.Text = fields(0)
+        field2.Text = fields(1)
+        field3.Text = fields(2)
+        field4.Text = fields(3)
+        field5.Text = fields(4)
+        If File.Exists(fields(5)) Then
+            PictureBox1.Load(fields(5))
         End If
 
     End Sub
