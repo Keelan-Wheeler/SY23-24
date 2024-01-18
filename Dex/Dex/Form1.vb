@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-
 Public Class Form1
     Dim records(50) As String
     Dim count As Integer
@@ -13,32 +12,6 @@ Public Class Form1
         PictureBox1.Image = Nothing
     End Sub
 
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        Dim r As String
-        r += (field1.Text)
-        r += ("|")
-        r += (field2.Text)
-        r += ("|")
-        r += (field3.Text)
-        r += ("|")
-        r += (field4.Text)
-        r += ("|")
-        r += (field5.Text)
-        r += ("|")
-        r += (PictureBox1.ImageLocation)
-        records(count) = r
-        If count = 0 Then count = 1
-        savetofile()
-    End Sub
-
-    Sub savetofile()
-        Dim outfile As New StreamWriter("data.txt")
-        For index = 0 To count - 1
-            outfile.WriteLine(records(index))
-        Next
-        outfile.Close()
-    End Sub
-
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         OpenFileDialog1.ShowDialog()
     End Sub
@@ -47,57 +20,86 @@ Public Class Form1
         PictureBox1.Load(OpenFileDialog1.FileName)
     End Sub
 
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        SaveToFile()
+    End Sub
+    Sub SaveToFile()
+        Dim r As String
+        r += field1.Text
+        r += "|"
+        r += field2.Text
+        r += "|"
+        r += field3.Text
+        r += "|"
+        r += field4.Text
+        r += "|"
+        r += field5.Text
+        r += "|"
+        r += PictureBox1.ImageLocation
+        If count = 0 Then count = 1
+        records(current) = r
+
+        Dim outFile As New StreamWriter("data.txt")
+        For index = 0 To count - 1
+            outFile.WriteLine(records(index))
+        Next
+        outFile.Close()
+    End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If IO.File.Exists("Data.txt") Then
+        If IO.File.Exists("data.txt") Then
             Dim inFile As New StreamReader("data.txt")
-            Dim idx As Integer = 0
             While (Not inFile.EndOfStream)
                 records(count) = inFile.ReadLine
                 count = count + 1
             End While
             inFile.Close()
-            Showrecord(0)
+            ShowRecord(0)
         End If
     End Sub
-    Public Sub Showrecord(Index As Integer)
+    Public Sub ShowRecord(index As Integer)
         PictureBox1.Image = Nothing
-        Dim fields() As String
-        If records(Index) <> Nothing Then
-            fields = records(Index).Split("|")
-            field1.Text = fields(0)
-            field2.Text = fields(1)
-            field3.Text = fields(2)
-            field4.Text = fields(3)
-            field5.Text = fields(4)
-            If File.Exists(fields(5)) Then
-                PictureBox1.Load(fields(5))
+        If records(index) <> Nothing Then
+            Dim Fields() As String
+            Fields = records(index).Split("|")
+            field1.Text = Fields(0)
+            field2.Text = Fields(1)
+            field3.Text = Fields(2)
+            field4.Text = Fields(3)
+            field5.Text = Fields(4)
+            If File.Exists(Fields(5)) Then
+                PictureBox1.Load(Fields(5))
             End If
         End If
     End Sub
 
-    Private Sub firstbtn_Click(sender As Object, e As EventArgs) Handles firstbtn.Click
+    Private Sub FirstButton_Click(sender As Object, e As EventArgs) Handles firstbtn.Click
+        SaveToFile()
         current = 0
-        Showrecord(current)
+        ShowRecord(current)
     End Sub
 
-    Private Sub lastbtn_Click(sender As Object, e As EventArgs) Handles lastbtn.Click
-        If count > 0 Then
-            current = count - 1
-            Showrecord(current)
-        End If
-    End Sub
-
-    Private Sub prevbtn_Click(sender As Object, e As EventArgs) Handles prevbtn.Click
+    Private Sub PrevButton_Click(sender As Object, e As EventArgs) Handles prevbtn.Click
+        SaveToFile()
         If current > 0 Then
             current = current - 1
-            Showrecord(current)
         End If
+        ShowRecord(current)
     End Sub
 
-    Private Sub nextbtn_Click(sender As Object, e As EventArgs) Handles nextbtn.Click
+    Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles nextbtn.Click
+        SaveToFile()
         If current < count - 1 Then
             current = current + 1
-            Showrecord(current)
+        End If
+        ShowRecord(current)
+    End Sub
+
+    Private Sub LastButton_Click(sender As Object, e As EventArgs) Handles lastbtn.Click
+        SaveToFile()
+        If count > 0 Then
+            current = count - 1
+            ShowRecord(current)
         End If
     End Sub
 End Class
