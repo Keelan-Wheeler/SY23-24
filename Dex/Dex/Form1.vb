@@ -14,18 +14,28 @@ Public Class Form1
     End Sub
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
-        Dim outfile As New IO.StreamWriter("data.txt")
-        outfile.Write(field1.Text)
-        outfile.Write("|")
-        outfile.Write(field2.Text)
-        outfile.Write("|")
-        outfile.Write(field3.Text)
-        outfile.Write("|")
-        outfile.Write(field4.Text)
-        outfile.Write("|")
-        outfile.Write(field5.Text)
-        outfile.Write("|")
-        outfile.WriteLine(PictureBox1.ImageLocation)
+        Dim r As String
+        r += (field1.Text)
+        r += ("|")
+        r += (field2.Text)
+        r += ("|")
+        r += (field3.Text)
+        r += ("|")
+        r += (field4.Text)
+        r += ("|")
+        r += (field5.Text)
+        r += ("|")
+        r += (PictureBox1.ImageLocation)
+        records(count) = r
+        If count = 0 Then count = 1
+        savetofile()
+    End Sub
+
+    Sub savetofile()
+        Dim outfile As New StreamWriter("data.txt")
+        For index = 0 To count - 1
+            outfile.WriteLine(records(index))
+        Next
         outfile.Close()
     End Sub
 
@@ -50,6 +60,7 @@ Public Class Form1
         End If
     End Sub
     Public Sub Showrecord(Index As Integer)
+        PictureBox1.Image = Nothing
         Dim fields() As String
         If records(Index) <> Nothing Then
             fields = records(Index).Split("|")
@@ -70,8 +81,10 @@ Public Class Form1
     End Sub
 
     Private Sub lastbtn_Click(sender As Object, e As EventArgs) Handles lastbtn.Click
-        current = count - 1
-        Showrecord(current)
+        If count > 0 Then
+            current = count - 1
+            Showrecord(current)
+        End If
     End Sub
 
     Private Sub prevbtn_Click(sender As Object, e As EventArgs) Handles prevbtn.Click
