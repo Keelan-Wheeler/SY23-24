@@ -42,6 +42,7 @@ Partial Class Form1
         Me.prevbtn = New System.Windows.Forms.Button()
         Me.nextbtn = New System.Windows.Forms.Button()
         Me.lastbtn = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -96,7 +97,7 @@ Partial Class Form1
         Me.field1.Location = New System.Drawing.Point(81, 238)
         Me.field1.Multiline = True
         Me.field1.Name = "field1"
-        Me.field1.Size = New System.Drawing.Size(125, 27)
+        Me.field1.Size = New System.Drawing.Size(240, 27)
         Me.field1.TabIndex = 5
         '
         'field2
@@ -206,11 +207,21 @@ Partial Class Form1
         Me.lastbtn.Text = "Last"
         Me.lastbtn.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(49, 190)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(134, 27)
+        Me.TextBox1.TabIndex = 16
+        Me.TextBox1.Text = "Rdr2 Weapon Stats"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.lastbtn)
         Me.Controls.Add(Me.nextbtn)
         Me.Controls.Add(Me.prevbtn)
@@ -258,4 +269,5 @@ Partial Class Form1
     Friend WithEvents prevbtn As Button
     Friend WithEvents nextbtn As Button
     Friend WithEvents lastbtn As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class
