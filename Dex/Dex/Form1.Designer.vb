@@ -97,6 +97,7 @@ Partial Class Form1
         Me.field1.Location = New System.Drawing.Point(81, 238)
         Me.field1.Multiline = True
         Me.field1.Name = "field1"
+        Me.field1.ReadOnly = True
         Me.field1.Size = New System.Drawing.Size(240, 27)
         Me.field1.TabIndex = 5
         '
@@ -104,6 +105,7 @@ Partial Class Form1
         '
         Me.field2.Location = New System.Drawing.Point(81, 271)
         Me.field2.Name = "field2"
+        Me.field2.ReadOnly = True
         Me.field2.Size = New System.Drawing.Size(125, 27)
         Me.field2.TabIndex = 6
         '
@@ -111,6 +113,7 @@ Partial Class Form1
         '
         Me.field3.Location = New System.Drawing.Point(81, 313)
         Me.field3.Name = "field3"
+        Me.field3.ReadOnly = True
         Me.field3.Size = New System.Drawing.Size(125, 27)
         Me.field3.TabIndex = 7
         '
@@ -118,6 +121,7 @@ Partial Class Form1
         '
         Me.field4.Location = New System.Drawing.Point(81, 351)
         Me.field4.Name = "field4"
+        Me.field4.ReadOnly = True
         Me.field4.Size = New System.Drawing.Size(125, 27)
         Me.field4.TabIndex = 8
         '
@@ -125,15 +129,16 @@ Partial Class Form1
         '
         Me.field5.Location = New System.Drawing.Point(81, 391)
         Me.field5.Name = "field5"
+        Me.field5.ReadOnly = True
         Me.field5.Size = New System.Drawing.Size(125, 27)
         Me.field5.TabIndex = 9
         '
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(235, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(327, 60)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(311, 220)
+        Me.PictureBox1.Size = New System.Drawing.Size(470, 330)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
@@ -209,7 +214,7 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(49, 190)
+        Me.TextBox1.Location = New System.Drawing.Point(92, 112)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(134, 27)
