@@ -58,6 +58,7 @@ Partial Class Form1
         Me.MoverControl4 = New Platformer.MoverControl()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGround, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,7 +202,7 @@ Partial Class Form1
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.Platformer.My.Resources.Resources._2024_native_american_one_dollar_uncirculated_coin_obverse
-        Me.PictureBox5.Location = New System.Drawing.Point(455, 128)
+        Me.PictureBox5.Location = New System.Drawing.Point(485, 128)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(48, 50)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -256,7 +257,7 @@ Partial Class Form1
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.Platformer.My.Resources.Resources._2024_native_american_one_dollar_uncirculated_coin_obverse
-        Me.PictureBox13.Location = New System.Drawing.Point(120, 92)
+        Me.PictureBox13.Location = New System.Drawing.Point(140, 92)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(48, 50)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -308,7 +309,7 @@ Partial Class Form1
         'PictureBox17
         '
         Me.PictureBox17.Image = Global.Platformer.My.Resources.Resources._76085c318d9669a732efbf9ca7cd6830
-        Me.PictureBox17.Location = New System.Drawing.Point(368, 296)
+        Me.PictureBox17.Location = New System.Drawing.Point(418, 296)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(40, 40)
         Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -327,7 +328,7 @@ Partial Class Form1
         'PictureBox18
         '
         Me.PictureBox18.Image = Global.Platformer.My.Resources.Resources._76085c318d9669a732efbf9ca7cd6830
-        Me.PictureBox18.Location = New System.Drawing.Point(160, 243)
+        Me.PictureBox18.Location = New System.Drawing.Point(200, 243)
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.Size = New System.Drawing.Size(40, 40)
         Me.PictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -418,6 +419,17 @@ Partial Class Form1
         Me.Label3.TabIndex = 32
         Me.Label3.Text = "Coins:"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(274, 243)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(196, 111)
+        Me.Button1.TabIndex = 33
+        Me.Button1.Text = "Reset"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -425,6 +437,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.Platformer.My.Resources.Resources.maxresdefault
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox19)
@@ -518,4 +531,5 @@ Partial Class Form1
     Friend WithEvents PictureBox19 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Button1 As Button
 End Class
