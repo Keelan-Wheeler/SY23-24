@@ -83,17 +83,35 @@ Public Class Form1
                 If collect = 8 Then
                     b.Visible = False
                     PictureBox16.Visible = True
+                    Button1.Visible = True
                 End If
             End If
             If TypeOf b Is PictureBox Then
                 If health = 0 Then
                     b.Visible = False
                     PictureBox19.Visible = True
+                    Button1.Visible = True
                 End If
             End If
         Next
     End Sub
     Private Sub tmrGravity_Tick(sender As Object, e As EventArgs) Handles tmrGravity.Tick
         picPlayer.Top += moveSpeed
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        collect = 0
+        health = 100
+        Label1.Text = collect
+        ProgressBar1.Value = health
+        For Each b As Control In Me.Controls
+            If TypeOf b Is PictureBox Then
+                b.Visible = True
+            End If
+        Next
+        PictureBox19.Visible = False
+        PictureBox16.Visible = False
+        picPlayer.Location = New Point(12, 300)
+        Button1.Visible = False
     End Sub
 End Class
