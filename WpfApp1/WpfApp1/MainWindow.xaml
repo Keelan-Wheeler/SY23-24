@@ -1,0 +1,25 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="ccnum" HorizontalAlignment="Left" Margin="43,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="nambx" HorizontalAlignment="Left" Margin="43,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="xpnum" HorizontalAlignment="Left" Margin="43,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="snum" HorizontalAlignment="Left" Margin="185,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,74,0,0" TextWrapping="Wrap" Text="Name on Card" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,31,0,0" TextWrapping="Wrap" Text="Card Number" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,116,0,0" TextWrapping="Wrap" Text="Expiry Date" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="185,116,0,0" TextWrapping="Wrap" Text="Security Code" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="embx" HorizontalAlignment="Left" Margin="325,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="325,31,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Margin="325,92,0,0" TextWrapping="Wrap" Text="Phone Number" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="phnum" HorizontalAlignment="Left" Margin="325,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="paybtn" Content="Pay" HorizontalAlignment="Left" Margin="164,168,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Margin="265,168,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

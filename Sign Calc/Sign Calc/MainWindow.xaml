@@ -1,0 +1,27 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sign_Calc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Calendar x:Name="Cal1" HorizontalAlignment="Left" Margin="41,36,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Sign" HorizontalAlignment="Left" Margin="277,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="277,120,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="AriesPB" HorizontalAlignment="Left" Height="100" Margin="10,217,0,0" VerticalAlignment="Top" Width="100" Source="/Aries.PNG" IsEnabled="False"/>
+        <Image x:Name="TaurusPB" HorizontalAlignment="Left" Height="100" Margin="130,217,0,0" VerticalAlignment="Top" Width="100" Source="/Tarus.PNG" IsEnabled="False"/>
+        <Image x:Name="GeminiPB" HorizontalAlignment="Left" Height="100" Margin="243,217,0,0" VerticalAlignment="Top" Width="100" Source="/Gemini.PNG" IsEnabled="False"/>
+        <Image x:Name="CancerPB" HorizontalAlignment="Left" Height="100" Margin="370,217,0,0" VerticalAlignment="Top" Width="100" Source="/cancer.PNG" IsEnabled="False"/>
+        <Image x:Name="LeoPB" HorizontalAlignment="Left" Height="100" Margin="490,217,0,0" VerticalAlignment="Top" Width="100" Source="/Leo.PNG" IsEnabled="False"/>
+        <Image x:Name="VirgoPB" HorizontalAlignment="Left" Height="100" Margin="603,217,0,0" VerticalAlignment="Top" Width="100" Source="/Virgo.PNG"/>
+        <Image x:Name="LibraPB" HorizontalAlignment="Left" Height="100" Margin="10,333,0,0" VerticalAlignment="Top" Width="100" Source="/libra.PNG" IsEnabled="False"/>
+        <Image x:Name="ScorpioPB" HorizontalAlignment="Left" Height="100" Margin="130,333,0,0" VerticalAlignment="Top" Width="100" Source="/scorpio.PNG" IsEnabled="False"/>
+        <Image x:Name="SagittariusPB" HorizontalAlignment="Left" Height="100" Margin="243,333,0,0" VerticalAlignment="Top" Width="100" Source="/aqua.PNG" IsEnabled="False"/>
+        <Image x:Name="CapricornPB" HorizontalAlignment="Left" Height="100" Margin="370,333,0,0" VerticalAlignment="Top" Width="100" Source="/capri.PNG" IsEnabled="False"/>
+        <Image x:Name="AquariusPB" HorizontalAlignment="Left" Height="100" Margin="490,333,0,0" VerticalAlignment="Top" Width="100" Source="/sagi.PNG" IsEnabled="False"/>
+        <Image x:Name="PiscesPB" HorizontalAlignment="Left" Height="100" Margin="603,333,0,0" VerticalAlignment="Top" Width="100" Source="/piscis.PNG" IsEnabled="False"/>
+
+    </Grid>
+</Window>
