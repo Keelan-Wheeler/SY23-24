@@ -29,6 +29,20 @@ Class MainWindow
                 Canvas.Children.Add(el)
             End If
         End If
+        If shapelbl.Content = "Polygon" Then
+            Dim r As New Polygon
+            Dim p As Point = Mouse.GetPosition(Canvas)
+            r.Fill = clrrect.Fill
+            r.Points.Add(p + New Point(4 * widthsldr.Value, 4 * widthsldr.Value))
+            r.Points.Add(p + New Point(-4 * widthsldr.Value, -4 * widthsldr.Value))
+            r.Points.Add(p + New Point(-7 * widthsldr.Value, -2 * widthsldr.Value))
+            r.Points.Add(p + New Point(-7 * widthsldr.Value, 2 * widthsldr.Value))
+            r.Points.Add(p + New Point(-4 * widthsldr.Value, 4 * widthsldr.Value))
+            r.Points.Add(p + New Point(4 * widthsldr.Value, -4 * widthsldr.Value))
+            r.Points.Add(p + New Point(7 * widthsldr.Value, -2 * widthsldr.Value))
+            r.Points.Add(p + New Point(7 * widthsldr.Value, 2 * widthsldr.Value))
+            Canvas.Children.Add(r)
+        End If
     End Sub
 
     Private Sub Canvas_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs) Handles clr1.MouseDown, clr2.MouseDown, clr3.MouseDown, clr4.MouseDown
@@ -110,5 +124,9 @@ Class MainWindow
 
     Private Sub Angle_ValueChanged(sender As Object, e As RoutedPropertyChangedEventArgs(Of Double)) Handles Angle.ValueChanged
         clrrect.Fill = New LinearGradientBrush(grad1, grad2, Angle.Value)
+    End Sub
+
+    Private Sub poly_Click(sender As Object, e As RoutedEventArgs) Handles poly.Click
+        shapelbl.Content = sender.Content
     End Sub
 End Class
