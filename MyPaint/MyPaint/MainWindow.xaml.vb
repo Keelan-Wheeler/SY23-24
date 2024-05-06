@@ -41,7 +41,9 @@ Class MainWindow
             r.Points.Add(p + New Point(4 * widthsldr.Value, -4 * widthsldr.Value))
             r.Points.Add(p + New Point(7 * widthsldr.Value, -2 * widthsldr.Value))
             r.Points.Add(p + New Point(7 * widthsldr.Value, 2 * widthsldr.Value))
-            Canvas.Children.Add(r)
+            If e.LeftButton = MouseButtonState.Pressed Then
+                Canvas.Children.Add(r)
+            End If
         End If
     End Sub
 
